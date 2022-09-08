@@ -1,0 +1,12 @@
+@import "src/app/app.utils";
+
+.cocktail {
+  &__titre {
+    color: $couleurPrincipale;
+    background-color: $couleurSecondaire;
+  }
+  &__corps {
+    color: $couleurSecondaire;
+    background-color: $couleurPrincipale;
+  }
+}

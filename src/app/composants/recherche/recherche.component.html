@@ -1,0 +1,14 @@
+<form #monForm="ngForm">
+  <input
+    type="text"
+    name="recherche"
+    ngModel
+    (keyup)="submitForm(monForm.value)"
+  >
+</form>
+
+<div *ngIf="resultatsRecherche | async as resultats">
+  <div *ngFor="let cocktail of resultats['hydra:member']">
+    <app-cocktail [cocktail]="cocktail"></app-cocktail>
+  </div>
+</div>

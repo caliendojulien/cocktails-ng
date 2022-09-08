@@ -1,0 +1,9 @@
+<div *ngIf="hydra | async as reponseApi">
+
+
+  <p>Il y a {{reponseApi["hydra:totalItems"]}} cocktails en BDD.</p>
+
+  <div *ngFor="let cocktail of reponseApi['hydra:member']">
+    <app-cocktail [cocktail]="cocktail"></app-cocktail>
+  </div>
+</div>
